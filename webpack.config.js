@@ -33,10 +33,15 @@ module.exports = {
             loader: 'babel-loader',
             test: /\.js$/,
             exclude: /node_modules/
+
          }
       ]
    },
    devServer: {
-      port: 7777
+      port: 7777,
+       historyApiFallback : true
+       start: {
+        keepAlive: true
+      }
    }
 };
